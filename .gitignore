@@ -1,0 +1,23 @@
+# 依賴套件（不需要 commit，npm install 會重新安裝）
+node_modules/
+
+# Vite 建置輸出
+dist/
+dist-ssr/
+
+# 本機環境變數（內含密鑰，不能上傳）
+.env.local
+.env.*.local
+
+# 編輯器設定
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS 產生的檔案
+.DS_Store
+Thumbs.db
