@@ -1014,11 +1014,25 @@ body::before {
   .seg button { padding: 5px 10px; font-size: 12px; }
 
   /* ── Admission block ── */
-  .admission-toggle { padding: 12px 14px; gap: 10px; }
+  /* 第一行：icon + 標題 + ▸；第二行：pills */
+  .admission-toggle {
+    padding: 12px 14px; gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .at-left  { order: 1; flex: 1 1 auto; min-width: 0; gap: 8px; }
+  .at-chev  { order: 2; flex-shrink: 0; }
+  .at-tags  {
+    order: 3;
+    flex: 0 0 100%;           /* 整行，換到第二行 */
+    padding-left: 44px;       /* 對齊 icon 後面的文字 */
+    gap: 5px; flex-wrap: wrap;
+    margin-top: -2px;
+  }
   .at-title { font-size: 13px; }
-  .at-sub { font-size: 11px; }
-  .at-tags { gap: 3px; }
-  .at-pill { font-size: 10px; padding: 2px 7px; }
+  .at-sub   { font-size: 11px; }
+  .at-pill  { font-size: 11px; padding: 3px 9px; }
+  .at-icon  { width: 32px; height: 32px; font-size: 15px; }
   .admission-paths { grid-template-columns: 1fr; gap: 8px; }
   .admission-detail { padding: 0 12px 14px; }
 
