@@ -941,4 +941,102 @@ body::before {
   .school-section { padding: 18px; }
   .admit-stage { padding: 24px 18px; }
   .stage-title { font-size: 22px; }
+  .cat-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .dept-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+}
+
+/* ======== 手機版 (≤600px) ======== */
+@media (max-width: 600px) {
+  /* ── TopBar ── */
+  .topbar-inner {
+    padding: 8px 12px; gap: 8px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+  }
+  .brand { grid-column: 1; grid-row: 1; }
+  .topbar-actions { grid-column: 3; grid-row: 1; margin-left: 0; gap: 6px; }
+  .topnav {
+    grid-column: 1 / -1; grid-row: 2;
+    width: 100%; justify-content: center;
+    margin-left: 0; gap: 2px;
+  }
+  .brand-mark { width: 40px; height: 40px; border-radius: 10px; }
+  .brand-mark .bm-1, .brand-mark .bm-2 { font-size: 14px; }
+  .topnav button { padding: 7px 9px; font-size: 12px; gap: 4px; }
+  .topnav button .nn { display: none; }
+  .ta-btn { padding: 6px 10px; font-size: 12px; gap: 4px; }
+
+  /* ── Main content ── */
+  .main { padding: 16px 12px 60px; }
+  .page { gap: 24px; }
+  .page-hero { padding: 20px 0 0; }
+  .hero-title { font-size: clamp(26px, 8vw, 34px); margin-bottom: 12px; }
+  .hero-sub { font-size: 15px; }
+
+  /* ── Categories ── */
+  .cat-grid { grid-template-columns: 1fr; gap: 20px; }
+  .cat-card { padding: 20px 18px 16px; }
+  .cat-card::before { transform: translate(5px, 5px); }
+  .cat-name { font-size: 20px; }
+  .cat-icon { width: 48px; height: 48px; font-size: 24px; }
+  .cat-foot { flex-direction: column; align-items: flex-start; gap: 10px; padding: 18px; }
+
+  /* ── Admission page ── */
+  .admit-stage { padding: 20px 14px 20px; }
+  .stage-title { font-size: 18px; }
+  .stage-tag { font-size: 11px; padding: 4px 10px; left: 14px; }
+  .path-grid { grid-template-columns: 1fr; gap: 12px; }
+  .route-pair { grid-template-columns: 1fr; }
+  .bridge-list { grid-template-columns: 1fr; }
+
+  /* ── Schools page ── */
+  .school-section { padding: 14px 12px; }
+  .school-section-head {
+    flex-direction: column; gap: 10px;
+    padding-bottom: 14px; margin-bottom: 14px;
+  }
+  .school-mark { width: 48px; height: 48px; font-size: 18px; }
+  .school-section-head h2 { font-size: 20px; gap: 6px; }
+  .school-links { gap: 6px; }
+
+  /* ── Dept cards ── */
+  .dept-grid { grid-template-columns: 1fr; gap: 14px; }
+  .dept-name { font-size: 18px; }
+
+  /* ── Filter bar ── */
+  .filter-bar { padding: 12px 14px; gap: 10px; border-radius: 14px; }
+  .filter-row { gap: 8px; }
+  .filter-search { min-width: 0; }
+  .chip-scroll { gap: 5px; }
+  .fchip { padding: 5px 10px; font-size: 12px; }
+  .seg button { padding: 5px 10px; font-size: 12px; }
+
+  /* ── Admission block ── */
+  .admission-toggle { padding: 12px 14px; gap: 10px; }
+  .at-title { font-size: 13px; }
+  .at-sub { font-size: 11px; }
+  .at-tags { gap: 3px; }
+  .at-pill { font-size: 10px; padding: 2px 7px; }
+  .admission-paths { grid-template-columns: 1fr; gap: 8px; }
+  .admission-detail { padding: 0 12px 14px; }
+
+  /* ── Compare bar ── */
+  .compare-bar { bottom: 12px; padding: 6px 6px 6px 14px; }
+  .compare-thumbs { display: none; }
+  .compare-bar-inner { gap: 8px; }
+  .compare-info { font-size: 12px; }
+
+  /* ── Compare modal ── */
+  .modal-overlay { padding: 12px; }
+  .modal-head { padding: 16px 18px; }
+  .modal-head h2 { font-size: 18px; }
+  .compare-table-wrap { padding: 14px; }
+
+  /* ── Footer ── */
+  .sitefoot-inner { padding: 32px 16px 20px; gap: 24px; }
+  .sitefoot-traffic { padding: 14px 16px; }
+  .traffic-inner { gap: 14px; }
+  .sitefoot-bottom { padding: 14px 16px; font-size: 10px; }
 }
